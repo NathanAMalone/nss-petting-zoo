@@ -8,5 +8,4 @@ from .goat import Goat
 from .llama import Llama
 from .raccoon import Raccoon
 from .sheep import Sheep
-from .snake import Snake
 from .tiger import Tiger

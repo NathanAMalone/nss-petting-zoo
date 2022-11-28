@@ -1,21 +1,20 @@
 from datetime import date
-from attractions import varmint_village
+from attractions import slither_inn
 
-class Tiger:
+class Snake:
 
-    def __init__(self, name, species, shift, food):
+    def __init__(self, name, species, food):
         self.name = name
         self.species = species
         self.date_added = date.today()
-        self.walking = True
-        self.shift = shift
+        self.slithering = True
         self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
+    
     def add_animal(self):
-        varmint_village.animals.append(self)
-
+        slither_inn.animals.append(self)
+    
     def __str__(self):
         return f"{self.name} is a {self.species}"

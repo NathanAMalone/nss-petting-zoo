@@ -1,1 +1,1 @@
-from .eel import Eel
+from .snake import Snake
