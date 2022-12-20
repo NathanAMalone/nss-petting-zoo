@@ -1,20 +1,15 @@
 from datetime import date
 from attractions import varmint_village
+from index import Animal
 
-class Llama:
+class Llama(Animal):
 
-    def __init__(self, name, species, shift, food):
+    def __init__(self, name, species, shift, food, chip_num):
         # Establish the properties of each animal
         # with a default value
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food, chip_num)
         self.walking = True
         self.shift = shift
-        self.food = food
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def add_animal(self):
         varmint_village.animals.append(self)

@@ -1,18 +1,13 @@
 from datetime import date
 from attractions import critter_cove
+from index import Animal
 
-class Shark:
+class Shark(Animal):
 
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.swimming = True
-        self.food = food
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
+        
     def add_animal(self):
         critter_cove.animals.append(self)
 
