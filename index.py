@@ -4,12 +4,17 @@ from animals import (Alligator, Camel, Deer, Donkey, Eel, Elephant, Fish,
 from attractions import PettingZoo, SnakePit, Wetlands
 
 
+varmint_village = PettingZoo("Varmint Village", "critters that like to dig and scurry")
+critter_cove = Wetlands("Critter Cove", "marshiness magic")
+slither_inn = SnakePit("Slither Inn", "slithery surprises in every corner")
 
 miss_fuzz = Llama("Miss Fuzz", "domestic llama", "morning", "Llama Chow", 546258)
 # miss_fuzz.name = "Miss Fuzz"
 # miss_fuzz.species = "domestic llama"
 miss_fuzz.feed()
 miss_fuzz.add_animal()
+varmint_village.add_animal_pythonic(miss_fuzz)
+varmint_village.add_animal_type_check(miss_fuzz)
 
 tigger = Tiger("Tigger", "tiger", "morning", "Tiger Chow", 465463)
 # tigger.name = "Tigger"
@@ -28,6 +33,7 @@ lectric = Eel("Lectric", "electric eel", "Eel Chow", 456486524)
 # lectric.species = "electric eel"
 lectric.feed()
 lectric.add_animal()
+varmint_village.add_animal_pythonic(lectric)
 
 bubba = Fish("Bubba", "big mouth bass", "Fish Chow", 987632)
 # bubba.name = "Bubba"
@@ -101,12 +107,8 @@ bob = Goose("Bob", "Canada goose", "watercress sandwiches", 6547564)
 bob.run()
 bob.swim()
 
-varmint_village = PettingZoo("Varmint Village", "critters that like to dig and scurry")
 varmint_village.add_animal(bob)
 
 for animal in varmint_village.animals:
     print(animal)
 
-slither_inn = SnakePit("Slither Inn", "slithery surprises in every corner")
-
-critter_cove = Wetlands("Critter Cove", "marshiness magic")

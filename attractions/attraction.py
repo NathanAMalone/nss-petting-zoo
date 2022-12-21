@@ -1,10 +1,4 @@
-# from .petting_zoo import PettingZoo
-# from .snake_pit import SnakePit
-# from .wetlands import Wetlands
 
-# varmint_village = PettingZoo("Varmint Village")
-# slither_inn = SnakePit("Slither Inn")
-# critter_cove = Wetlands("Critter Cove")
 
 class Attraction:
 
