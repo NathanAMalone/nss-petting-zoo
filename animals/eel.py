@@ -1,13 +1,13 @@
 from datetime import date
-from attractions import critter_cove
-from index import Animal
+from index import critter_cove
+from .animal import Animal
 
-class Shark(Animal):
+class Eel(Animal):
 
     def __init__(self, name, species, food, chip_num):
-        super().__init__(name, species, food, chip_num)
+        super().__init__(name, species, food, chip_num)        
         self.swimming = True
-        
+
     def add_animal(self):
         critter_cove.animals.append(self)
 

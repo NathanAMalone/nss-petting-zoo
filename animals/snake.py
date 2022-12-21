@@ -1,6 +1,6 @@
 from datetime import date
-from attractions import slither_inn
-from index import Animal
+from index import slither_inn
+from .animal import Animal
 
 class Snake(Animal):
 

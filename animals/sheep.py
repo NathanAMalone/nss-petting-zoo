@@ -1,6 +1,6 @@
 from datetime import date
-from attractions import varmint_village
-from index import Animal
+from index import varmint_village
+from .animal import Animal
 
 class Sheep(Animal):
 

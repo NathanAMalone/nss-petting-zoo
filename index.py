@@ -1,28 +1,9 @@
 # import the python datetime module to help us create a timestamp
-from datetime import date
-from .slithering import Snake
-from .swimming import Fish, Shark, Eel
-from .walking import (Alligator, Camel, Deer, Donkey, Elephant, Fox, Goat,
-    Llama, Raccoon, Sheep, Tiger)
+from animals import (Alligator, Camel, Deer, Donkey, Eel, Elephant, Fish,
+    Fox, Goat, Goose, Llama, Raccoon, Shark, Sheep, Snake, Tiger)
+from attractions import PettingZoo, SnakePit, Wetlands
 
-class Animal:
-    def __init__(self, name, species, food, chip_num):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.__chip_number = chip_num
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-    
-    @property
-    def chip_number(self):
-        return self.__chip_number
-    
-    @chip_number.setter
-    def chip_number(self, num):
-        pass
 
 miss_fuzz = Llama("Miss Fuzz", "domestic llama", "morning", "Llama Chow", 546258)
 # miss_fuzz.name = "Miss Fuzz"
@@ -111,5 +92,21 @@ dolly.add_animal()
 chomps = Alligator("Chomps", "american alligator", "afternoon", "Alligator Chow", 2221112)
 # chomps.name = "Chomps"
 # chomps.species = "american alligator"
+chomps.run()
+chomps.swim()
 chomps.feed()
 chomps.add_animal()
+
+bob = Goose("Bob", "Canada goose", "watercress sandwiches", 6547564)
+bob.run()
+bob.swim()
+
+varmint_village = PettingZoo("Varmint Village", "critters that like to dig and scurry")
+varmint_village.add_animal(bob)
+
+for animal in varmint_village.animals:
+    print(animal)
+
+slither_inn = SnakePit("Slither Inn", "slithery surprises in every corner")
+
+critter_cove = Wetlands("Critter Cove", "marshiness magic")

@@ -1,12 +1,13 @@
-from datetime import date
-from attractions import varmint_village
-from index import Animal
+from index import varmint_village
+from .animal import Animal
+from movements import Walking, Swimming
 
-class Alligator(Animal):
+class Alligator(Animal, Walking, Swimming):
 
     def __init__(self, name, species, shift, food, chip_num):
-        super().__init__(name, species, food, chip_num)        
-        self.walking = True
+        Animal.__init__(self, name, species, food, chip_num)
+        Walking.__init__(self)
+        Swimming.__init__(self)
         self.shift = shift
 
     

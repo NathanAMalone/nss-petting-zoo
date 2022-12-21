@@ -1,6 +1,6 @@
 from datetime import date
-from attractions import critter_cove
-from index import Animal
+from index import critter_cove
+from .animal import Animal
 
 class Fish(Animal):
 
